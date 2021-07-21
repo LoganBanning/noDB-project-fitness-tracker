@@ -14,7 +14,28 @@ function addWorkout(req,res) {
   res.status(200).send(workouts);
 }
 
+function updateWorkout(req, res){
+  let newWorkoutArr = workouts.map(workout => {
+    if(req.params.id === workout.id){
+      return { durationMinutes: req.params.durationMinutes };
+    } else {
+      return workout;
+    }
+  })
+
+  workouts = newWorkoutArr;
+  res.status(200).send(workouts);
+}
+
+function deleteWorkout(req, res){
+  const { deleteId } = req.query;
+  const deleteIndex = workouts.findIndex(workout => workout.id === deleteId)
+  workouts.splice(deleteIndex, 1);
+}
+
 module.exports = {
   getWorkouts,
-  addWorkout
+  addWorkout,
+  updateWorkout,
+  deleteWorkout
 }
