@@ -39,10 +39,14 @@ body {
   margin-top: 0px;
   margin: 20px;
 }
+.add-button:hover {
+  cursor: pointer;
+  background-color: #3a0ca3;
+}
 .workout-list {
   width: 50vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
@@ -50,8 +54,14 @@ body {
     border: 2px black solid;
     text-align: center;
 }
-
-.add-button:hover {
+.delete {
+  background-color: #4cc9f0;
+  width: 100px;
+  height: 40px;
+  border-radius: 10%;
+  margin-left: 30%;
+}
+.delete:hover {
   cursor: pointer;
   background-color: #3a0ca3;
 }

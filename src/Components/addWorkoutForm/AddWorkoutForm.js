@@ -27,28 +27,36 @@ export default class AddWorkoutForm extends Component {
     .catch(err => console.log(err))
   }
 
+  // handleMissingInput = () => { 
+  //   if(this.month === false && this.day === false && this.durationMinutes === false){
+  //     retrun alert('Missing an Input')
+  //   } else {
+  //     return 
+  //   }
+  // }  attempted code for if an input field is empty.
+
   render() {
     return (
       <div>
         <div>
           <label>
-            Month:
+            Month: <br />
         <input type='number' onChange={this.handleMonthInput} />
           </label>
         </div>
         <div>
           <label>
-            Day:
+            Day: <br />
           <input type='number' onChange={this.handleDayInput} />
           </label>
           </div>
           <div>
             <label>
-              Duration in Minutes:
+              Duration in Minutes: <br />
             <input type='number' onChange={this.handleDurationMinutesInput} />
               </label> 
           </div>
-          <button className='add-button'>ADD</button>
+          <button onClick={this.submitWorkout} className='add-button'>ADD</button>
           </div>
               )
             }

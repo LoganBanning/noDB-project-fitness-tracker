@@ -53,10 +53,11 @@ class App extends Component {
         <div className='add-workout-form'>
           <AddWorkoutForm updateWorkouts={this.updateWorkouts} />
         </div>
-        {this.state.workouts.map((workout,index) => {
+        {this.state.workouts.map((workout, index) => {
           return (
             <p className='workout-list'>
-              {`Month: ${workout.month}, Day: ${workout.day}, Duration: ${workout.durationMinutes}`}
+              {`Month: ${workout.month}, Day: ${workout.day}, Duration: ${workout.durationMinutes}`} <br />
+              <button className='delete' onClick={this.handleDelete}>Delete</button>
               </p>
 
 )

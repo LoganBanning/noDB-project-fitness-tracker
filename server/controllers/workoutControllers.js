@@ -31,11 +31,13 @@ function deleteWorkout(req, res){
   const { deleteId } = req.query;
   const deleteIndex = workouts.findIndex(workout => workout.id === deleteId)
   workouts.splice(deleteIndex, 1);
+
+  res.status(200).send(workouts);
 }
 
 module.exports = {
   getWorkouts,
   addWorkout,
   updateWorkout,
-  deleteWorkout
+  deleteWorkout,
 }
