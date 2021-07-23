@@ -57,7 +57,7 @@ class App extends Component {
           return (
             <p className='workout-list'>
               {`Month: ${workout.month}, Day: ${workout.day}, Duration: ${workout.durationMinutes}`} <br />
-              <button className='delete' onClick={this.handleDelete}>Delete</button>
+              <button className='delete-button' onClick={this.handleDelete}>Delete</button>
               </p>
 
 )

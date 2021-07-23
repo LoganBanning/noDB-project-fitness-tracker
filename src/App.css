@@ -22,13 +22,15 @@ body {
 .add-workout-form {
   font-size: x-large;
   align-items: center;
-  width: 50vw;
+  width: 30vw;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 60vh;
   border: 2px black solid;
+  background-color: #000000;
+  color: white;
 
 }
 .add-button {
@@ -44,24 +46,29 @@ body {
   background-color: #3a0ca3;
 }
 .workout-list {
-  width: 50vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-    border: 2px black solid;
-    text-align: center;
+  height: 150px;
+  width: 275px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+  border: 2px black solid;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  padding-left: 20px;
 }
-.delete {
+.delete-button {
   background-color: #4cc9f0;
   width: 100px;
   height: 40px;
   border-radius: 10%;
   margin-left: 30%;
+  margin-top: 10px;
 }
-.delete:hover {
+.delete-button:hover {
   cursor: pointer;
   background-color: #3a0ca3;
 }
