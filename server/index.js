@@ -8,9 +8,9 @@ app.get('/api/workouts', getWorkouts)
 
 app.post('/api/workouts', addWorkout)
 
-app.put('/api/workouts/:id/:name', updateWorkout)
+app.put('/api/workouts/:id/:durationMinutes', updateWorkout)
 
-app.delete('/api/cars', deleteWorkout)
+app.delete('/api/workouts', deleteWorkout)
 
 
 app.listen(5050, () => console.log('listening on 5050'));

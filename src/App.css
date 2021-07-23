@@ -44,9 +44,11 @@ body {
 .add-button:hover {
   cursor: pointer;
   background-color: #3a0ca3;
+  width: 220px;
+  height: 70px;
 }
 .workout-list {
-  height: 150px;
+  height: 175px;
   width: 275px;
 	display: flex;
 	flex-direction: row;
@@ -70,5 +72,22 @@ body {
 }
 .delete-button:hover {
   cursor: pointer;
-  background-color: #3a0ca3;
+  background-color: #d62828;
 }
+
+.update-button {
+  background-color: #4cc9f0;
+  width: 100px;
+  height: 40px;
+  border-radius: 10%;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+.update-button:hover {
+  cursor: pointer;
+  background-color: #fca311;
+}
+.update-input {
+  margin-left: 20px;
+}
+

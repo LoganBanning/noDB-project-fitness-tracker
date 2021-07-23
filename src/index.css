@@ -13,14 +13,9 @@ code {
 } */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
 
 
 body {
-  margin: ;
-  font-family: 'Varela Round', sans-serif;
-}
-
-code {
+  margin: 0;
   font-family: 'Varela Round', sans-serif;
 }

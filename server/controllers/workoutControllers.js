@@ -8,7 +8,6 @@ function getWorkouts(req, res){
 function addWorkout(req,res) {
   const { month, day, durationMinutes } = req.body;
   const workout = {month, day, durationMinutes};
-  console.log("Workout to add", workout);
   workouts.push({ month, day, durationMinutes });
 
   res.status(200).send(workouts);
@@ -16,8 +15,8 @@ function addWorkout(req,res) {
 
 function updateWorkout(req, res){
   let newWorkoutArr = workouts.map(workout => {
-    if(req.params.id === workout.id){
-      return { durationMinutes: req.params.durationMinutes };
+    if(req.params.id == workout.id){
+      return { ...workout, durationMinutes: req.params.durationMinutes };
     } else {
       return workout;
     }

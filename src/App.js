@@ -10,7 +10,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      workouts: []
+      workouts: [],
+      durationMinutes: ' ', 
     };
   }
 
@@ -24,18 +25,19 @@ class App extends Component {
     this.setState({ workouts })
   }
 
-  updateWorkoutsState = (e) => {
+  updateDurationMinutes = (e) => {
     this.setState({ durationMinutes: e.target.value })
   }
 
   updateWorkoutsRequest = (id) => {
-    axios.put(`/api/cars/${id}/${this.state.durationMinutes}`)
+    console.log({id})
+    axios.put(`/api/workouts/${id}/${this.state.durationMinutes}`)
     .then(({ data }) =>this.setState({ workouts: data }))
     .catch((err) => console.log(err))
   }
 
   handleDelete = (id) => {
-    axios.delete(`/api/cars?deleteId=${id}`)
+    axios.delete(`/api/workouts?deleteId=${id}`)
     .then(({ data }) => this.setState({ workouts: data }))
     .catch((err) => console.log(err))
   }
@@ -57,7 +59,9 @@ class App extends Component {
           return (
             <p className='workout-list'>
               {`Month: ${workout.month}, Day: ${workout.day}, Duration: ${workout.durationMinutes}`} <br />
-              <button className='delete-button' onClick={this.handleDelete}>Delete</button>
+              <input className='update-input' onChange={this.updateDurationMinutes}  />
+              <button className='update-button' onClick={() => this.updateWorkoutsRequest(workout.id)}>Update</button>
+              <button className='delete-button' onClick={this.handleDelete}  >Delete</button>
               </p>
 
 )
