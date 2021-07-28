@@ -1,4 +1,6 @@
 const data = require('../workouts');
+const { v4: uuid } = require('uuid');
+
 let workouts = [...data.workouts]
 
 function getWorkouts(req, res){
@@ -7,8 +9,8 @@ function getWorkouts(req, res){
 
 function addWorkout(req,res) {
   const { month, day, durationMinutes } = req.body;
-  const workout = {month, day, durationMinutes};
-  workouts.push({ month, day, durationMinutes });
+  const workout = {month, day, durationMinutes, id: uuid()};
+  workouts.push(workout);
 
   res.status(200).send(workouts);
 }
